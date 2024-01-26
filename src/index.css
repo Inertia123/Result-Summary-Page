@@ -1,13 +1,138 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Hanken Grotesk', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media only screen and (min-width: 900px){
+  main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  section{
+    display: flex;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    .top{
+      border-radius: 2rem;
+      flex: 50%;
+      padding: 2rem 0;
+    }
+    .top h1{
+      font-size: 1.5rem;
+      margin: 2rem 0 1rem 0;
+    }
+    .your{
+      font-size: 1.2rem;
+      padding: 0;
+      margin-bottom: 1.5rem;
+    }
+    .bpara{
+      padding: 0;
+      width: 60%;
+    }
+    .bottom{
+      flex: 50%;
+      border-radius: 0 2rem 2rem 0;
+    }
+    .circle{
+      width: 50%;
+    }
+  }
+
+}
+
+.left{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.top{
+  text-align: center;
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  border-radius: 0 0 2rem 2rem;
+}
+
+.top h1{
+  font-size: 1.2rem;
+  color: white;
+  margin:1rem 0 0.6rem 0;
+  font-weight: 600;
+}
+.bpara{
+  color: rgb(213, 214, 215);
+  width: 80%;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  padding-bottom: 2rem;
+}
+
+.your{
+  color: rgb(213, 214, 215);
+  padding: 1rem 0;
+}
+.bigcircle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle{
+  width: 35%;
+  aspect-ratio: 1;
+  background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.circle span{
+  font-size: 3rem;
+  font-weight: 800;
+  color: white;
+}
+
+.circle p{
+  font-size: 0.8rem;
+  color: rgb(213, 214, 215);
+}
+
+.bottom{
+  padding: 2rem;
+  text-align: center;
+}
+
+.bottom h2{
+  text-align: left;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+button{
+  margin-top: 2rem;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: hsl(224, 30%, 27%);
+  width: 100%;
+  padding: 0.7rem 0;
+  border-radius: 2rem;
+}
+
+.score{
+  font-weight: 800;
+  color: hsl(224, 30%, 27%);
+}
+.hundred{
+  color: rgb(170, 170, 171);
 }
